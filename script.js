@@ -1,15 +1,17 @@
 window.allQuestions = {
-  "Accident Procedures": [
+  "Нэр томьёо": [
     {
-      "text": "Who has the right of way?",
+      "text": "Аль сумаар замын өргөнийг үзүүлсэн бэ?",
       "options": [
-        "When clear",
-        "In traffic",
-        "On curves"
+        "А",
+        "Б",
+        "В",
+        "Г",
+        "Д"
       ],
-      "answer": "1",
-      "explanation": "This is an explanation for: Who has the right of way?",
-      "image": "https://content.ikon.mn/bt/images/7/60.jpeg"
+      "answer": "4",
+      "explanation": "Явган хүний зам замд хамаарна",
+      "image": "https://raw.githubusercontent.com/samsainaa58/DriverTest/refs/heads/main/1.png"
     },
     {
       "text": "How do you perform a safe turn?",

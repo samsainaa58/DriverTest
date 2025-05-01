@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Жолооны тест</title>
+  <style>
+  /* General layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f0f0f0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Category page layout */
+.category-page {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.category-page h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.category-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.category {
+  background: white;
+  color: #333;
+  padding: 7px 5px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  transition: background 0.3s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.category:hover {
+  background: #bcbdf7;
+}
+
+.category small {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  margin-top: 4px;
+  color: #666;
+}
+
+/* Quiz interface */
+.navbar {
+  background: white;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  z-index: 1000;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.navbar-top button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  background: #696cf5;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar-top button:hover {
+  background: #5a5dd4;
+}
+
+.category-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Progress bar */
+.progress-bar {
+  width: 100%;
+  background: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #696cf5;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* Quiz container */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+}
+
+/* Question styling */
+.question {
+  background: #f0f0f0;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.question-image {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+/* Options */
+.option {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border: 0px solid white;
+}
+
+.option:hover {
+  background-color: #ffe5b4;
+}
+
+.option.correct {
+  background-color: #90ee90 !important;
+  color: black;
+}
+
+.option.incorrect {
+  background-color: #f08080 !important;
+  color: black;
+}
+
+/* Explanations */
+.explanation {
+  margin-top: 10px;
+  font-style: italic;
+  color: #a00;
+}
+
+/* Final result */
+#final-result {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#resetBtn {
+  background-color: #696cf5;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#resetBtn:hover {
+  background-color: #575ad1;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- 🚪 Logout button -->
+  <button onclick="logout()" style="margin: 10px; background: #f55; color: white; padding: 10px 20px; border: none; border-radius: 6px;">Гарах</button>
+  <script>
+    function logout() {
+      localStorage.removeItem("loggedInUser");
+      window.location.href = "index.html";
+    }
+  </script>
+
+  <!-- ✅ Category Selection -->
+  <div id="categoryPage" class="category-page">
+    <h1>Жолооны тест</h1>
+    <div class="category-grid" id="categoryGrid"></div>
+  </div>
+
+  <!-- ✅ Quiz Page -->
+  <div id="quizPage" class="hidden">
+    <div class="navbar sticky">
+      <button onclick="backToCategories()">← Ангилал руу буцах</button>
+      <div id="categoryTitle" class="category-title"></div>
+      <div id="progressText" class="progress-text">Асуулт: 0 / 0</div>
+      <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+    </div>
+
+    <div class="container">
+      <form id="quizForm"></form>
+      <div id="final-result" class="hidden">
+        <h2 id="scoreText"></h2>
+        <button id="resetBtn" onclick="restartQuiz()">Шинээр эхлэх</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

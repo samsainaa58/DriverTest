@@ -3,146 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LOGIN</title>
-
-  <!-- Font Awesome for icons (optional) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f0f0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .container {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 40px 30px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-      width: 320px;
-      text-align: center;
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      font-size: 24px;
-      font-weight: 700;
-    }
-
-    .input-box {
-      position: relative;
-      margin-bottom: 20px;
-    }
-
-    .input-box i {
-      position: absolute;
-      left: 15px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #888;
-      font-size: 16px;
-    }
-
-    .input-box input {
-      width: 80%;
-      padding: 12px 16px 12px 40px;
-      border: none;
-      border-radius: 12px;
-      background-color: #f4f3ff;
-      font-size: 14px;
-    }
-
-    .show-password {
-      display: flex;
-      align-items: center;
-      font-size: 13px;
-      justify-content: flex-start;
-      margin-bottom: 15px;
-    }
-
-    .show-password input {
-      margin-right: 6px;
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      border: none;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #8e90ed, #696cf5);
-      color: white;
-      font-weight: bold;
-      font-size: 15px;
-      cursor: pointer;
-      transition: 0.2s ease;
-    }
-
-    button:hover {
-      transform: scale(1.02);
-    }
-
-    #message {
-      color: red;
-      font-size: 13px;
-      margin-top: 10px;
-    }
-  </style>
+  <title>Жолооны тест</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div class="container">
-    <h2>LOGIN</h2>
-
-    <div class="input-box">
-      <i class="fas fa-user"></i>
-      <input type="text" id="username" placeholder="Username" />
+  <!-- ✅ Category Selection Page -->
+  <div id="categoryPage" class="category-page">
+    <h1>Жолооны тест</h1>
+    <div class="category-grid" id="categoryGrid">
+      <!-- Category buttons will be inserted here by JS -->
     </div>
-
-    <div class="input-box">
-      <i class="fas fa-lock"></i>
-      <input type="password" id="password" placeholder="Password" />
-    </div>
-
-    <div class="show-password">
-      <input type="checkbox" id="togglePassword" onclick="togglePasswordVisibility()" />
-      <label for="togglePassword">Show password</label>
-    </div>
-
-    <button onclick="signIn()">Login Now</button>
-    <p id="message"></p>
   </div>
 
-  <script>
-    const users = {
-      "Davaa": "Davaa123",
-      "Uuganaa": "Uuganaa123",
-      "Sainbayar": "Sainbayar123",
-      "Bataa": "Bataa123",
-      "Dorj": "Dorj123"
-    };
+  <!-- ✅ Quiz Page -->
+  <div id="quizPage" class="hidden">
+    <div class="navbar sticky">
+      <div class="navbar-top">
+        <div id="categoryTitle" class="category-title"></div>
+        <button onclick="backToCategories()">← Ангилал руу буцах</button>
+      </div>
+      <div id="progressText" class="progress-text">Асуулт: 0 / 0</div>
+      <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+    </div>
 
-    function signIn() {
-      const username = document.getElementById("username").value.trim();
-      const password = document.getElementById("password").value.trim();
+    <div class="container">
+      <form id="quizForm"></form>
 
-      if (users[username] && users[username] === password) {
-        window.location.href = "quiz.html";
-      } else {
-        document.getElementById("message").innerText = "Invalid username or password.";
-      }
-    }
+      <div id="final-result" class="hidden">
+        <h2 id="scoreText"></h2>
+        <button id="resetBtn" onclick="restartQuiz()">Шинээр эхлэх</button>
+      </div>
+    </div>
+  </div>
 
-    function togglePasswordVisibility() {
-      const passwordInput = document.getElementById("password");
-      passwordInput.type = passwordInput.type === "password" ? "text" : "password";
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>

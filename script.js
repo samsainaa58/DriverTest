@@ -1,4 +1,3 @@
-
 window.allQuestions = {
   "1. НЭР ТОМЬЁО БА ТОДОРХОЙЛОЛТ": [
     {
@@ -42,7 +41,7 @@ function startCategory(categoryName) {
   document.getElementById('categoryPage').classList.add('hidden');
   document.getElementById('quizPage').classList.remove('hidden');
 
-  document.getElementById('categoryTitle').innerText = `${categoryName} — ${totalQuestions} асуулт`;
+  document.getElementById('categoryTitle').innerText = categoryName;
   document.getElementById('progressText').innerText = `Асуулт: 0 / ${totalQuestions}`;
   document.getElementById('progressFill').style.width = '0%';
   document.getElementById('final-result').classList.add('hidden');
@@ -71,7 +70,7 @@ function renderQuestions() {
       ? `<button type='button' class='hint-btn' onclick='showHint(this)'>🔍 Hint</button>` : '';
     const hintBlock = `
       <div class='hint-container hidden'>
-        ${q.hintImage ? `<img src='${q.hintImage}' style='width: 50%; height: auto;'/>` : ''}
+        ${q.hintImage ? `<img src='${q.hintImage}' style='width: 100%; height: auto;'/>` : ''}
         ${q.hint ? `<div class='hint-text'>${q.hint}</div>` : ''}
       </div>
     `;
@@ -128,10 +127,11 @@ function backToCategories() {
   window.scrollTo(0, 0);
 }
 
-
 function showHint(button) {
-  const hint = button.nextElementSibling;
-  if (hint) {
-    hint.classList.toggle('hidden');
+  const questionBox = button.closest('.question');
+  if (!questionBox) return;
+  const hintContainer = questionBox.querySelector('.hint-container');
+  if (hintContainer) {
+    hintContainer.classList.toggle('hidden');
   }
 }

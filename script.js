@@ -385,7 +385,7 @@ window.allQuestions = {
       "2. Бүх жин нь 3.5 тонноос бага ачааны автомашин",
       "3. Бүх жин нь 3.5 тонноос их ачааны автомашин"
     ],
-    "answer": "2",
+    "answer": "3",
     "image": "",
     "hint": "",
     "hintImage": "images/cat2/C.jpg"

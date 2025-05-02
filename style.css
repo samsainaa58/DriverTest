@@ -227,7 +227,7 @@ body {
 
 .hint-container img {
   width: 100%;
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
   border-radius: 4px;
   margin-bottom: 8px;

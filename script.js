@@ -14,15 +14,15 @@ window.allQuestions = {
       "image": "https://raw.githubusercontent.com/samsainaa58/DriverTest/refs/heads/main/1.png"
     },
     {
-      "text": "“Зорчих хэсэг” гэж юу вэ?",
+      "text": "How do you perform a safe turn?",
       "options": [
-        "1. Тээврийн хэрэгслийн хөдөлгөөнд зориулсан замын хэсэг",
-        "2. Явган зорчигчийн хөдөлгөөнд зориулсан замын хэсэг",
-        "3. Зогсоол болон хөдөлгөөнд зориулагдаагүй замын хэсэг"
+        "Use signal",
+        "Speed up",
+        "Ignore signs"
       ],
       "answer": "1",
-      "explanation": "",
-      ""
+      "explanation": "This is an explanation for: How do you perform a safe turn?",
+      "image": "https://content.ikon.mn/bt/images/7/60.jpeg"
     },
     {
       "text": "What does a flashing yellow light mean?",

@@ -101,11 +101,13 @@ body {
 /* Progress bar */
 .progress-bar {
   width: 100%;
+  max-width: 840px;
+  margin: 6px auto 0 auto;
   background: #ddd;
   height: 10px;
   border-radius: 5px;
   overflow: hidden;
-  margin-top: 6px;
+  margin-top: 10px;
 }
 
 .progress-fill {
@@ -118,6 +120,9 @@ body {
 .progress-text {
   font-size: 14px;
   margin-top: 6px;
+  text-align: left;
+  width: 100%;
+  max-width: 800px;
 }
 
 /* Quiz container */
@@ -218,7 +223,6 @@ body {
   padding: 10px;
   border: 1px dashed #999;
   border-radius: 6px;
-  display: none;
 }
 
 .hint-container img {

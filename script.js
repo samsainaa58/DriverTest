@@ -11,7 +11,7 @@ window.allQuestions = {
     ],
     "answer": "4",
     "image": "images/cat1/q1.jpg",
-    "hint": "“Зам” гэдэгт хөдөлгөөнд нээлттэй хучилттай буюу шороон зурвас газрыг ойлгоно. Зорчих хэсэг, явган хүний зам, унадаг дугуйн зам, тусгаарлах зурвас, хөвөө, таримал зүлэг зэрэг замын дагуух бүх хэсгүүд “Зам”-д хамаарна.",
+    "hint": "",
     "hintImage": "images/cat1/h1.jpg"
   },
   {
@@ -23,7 +23,7 @@ window.allQuestions = {
     ],
     "answer": "1",
     "image": "",
-    "hint": "Тээврийн хэрэгслийн хөдөлгөөнд зориулсан замын хэсэг",
+    "hint": "",
     "hintImage": "images/cat1/h2.jpg"
   },
   {
@@ -48,7 +48,7 @@ window.allQuestions = {
     "answer": "2",
     "image": "images/cat1/q4.jpg",
     "hint": "",
-    "hintImage": ""
+    "hintImage": "images/cat1/h1.jpg"
   },
   {
     "text": "Аль зурагт гол замыг үзүүлсэн бэ?",
@@ -62,7 +62,7 @@ window.allQuestions = {
     "answer": "5",
     "image": "images/cat1/q5.jpg",
     "hint": "",
-    "hintImage": ""
+    "hintImage": "images/cat1/h5.jpg"
   },
   {
     "text": "Аль зурагт уулзварыг үзүүлсэн бэ?",
@@ -73,8 +73,8 @@ window.allQuestions = {
     ],
     "answer": "1",
     "image": "images/cat1/q6.jpg",
-    "hint": "А зурагт хучилттай замтай шороон зам нийлсэн гол ба туслах замын уулзварыг, Б зурагт гарцыг үзүүлжээ.",
-    "hintImage": ""
+    "hint": "\"А\" гол ба туслах замын уулзварыг, \"Б\" зурагт гарцыг үзүүлжээ.",
+    "hintImage": "images/cat1/h6.jpg"
   },
   {
     "text": "Аль нь механикжсан тээврийн хэрэгсэл вэ?",
@@ -87,7 +87,7 @@ window.allQuestions = {
     ],
     "answer": "1",
     "image": "",
-    "hint": "",
+    "hint": "“Механикжсан тээврийн хэрэгсэл” гэж мопедоос бусад, хөдөлгүүрээр тоноглогдсон тээврийн хэрэгслийг хэлнэ.",
     "hintImage": ""
   },
   {
@@ -99,7 +99,7 @@ window.allQuestions = {
     ],
     "answer": "2",
     "image": "",
-    "hint": "",
+    "hint": "Тогтоосон буудал бүхий чиглэлийн дагуу нийтийн үйлчилгээнд явж байгаа автобус, троллейбус",
     "hintImage": ""
   },
   {
@@ -111,7 +111,7 @@ window.allQuestions = {
     ],
     "answer": "1",
     "image": "",
-    "hint": "",
+    "hint": "Бүх жин = Техникийн тодорхойлолтоор тогтоосон жин ",
     "hintImage": ""
   },
   {
@@ -123,7 +123,7 @@ window.allQuestions = {
     ],
     "answer": "2",
     "image": "",
-    "hint": "",
+    "hint": "Бодит жин = Тухайн үеийн жин",
     "hintImage": ""
   },
   {
@@ -137,7 +137,7 @@ window.allQuestions = {
     ],
     "answer": "4",
     "image": "images/cat1/q11.jpg",
-    "hint": "Зам дээр ажил үүрэг гүйцэтгэж байгаа хүн (В)-ийг “Явган зорчигч”-д тооцохгүй (ЗХД-ийн 1.2.52).",
+    "hint": "Зам дээр ажил үүрэг гүйцэтгэж байгаа хүнийг “Явган зорчигч”-д тооцохгүй",
     "hintImage": ""
   },
   {
@@ -151,7 +151,7 @@ window.allQuestions = {
     "answer": "4",
     "image": "",
     "hint": "",
-    "hintImage": ""
+    "hintImage": "images/cat1/h12.jpg"
   },
   {
     "text": "Аль нь “Үзэгдэлт хангалтгүй нөхцөл” вэ?",
@@ -185,8 +185,8 @@ window.allQuestions = {
     ],
     "answer": "1",
     "image": "images/cat1/q15.jpg",
-    "hint": "“Гүйцэж түрүүлэх” гэдэгт зөвхөн урсгал сөрж гүйцэх үйлдлийг ойлгоно (ЗХД-ийн 1.2.9).",
-    "hintImage": ""
+    "hint": "\"А\" зурагт урсгал сөрж буюу \"Гүйцэж түрүүлэх\", \"Б\" зурагт урсгал сөрөлгүй \"гүйцэх\" үйлдэл хийж байна.",
+    "hintImage": "images/cat1/h15.jpg"
   },
   {
     "text": "Зурагт аль үйлдлийг үзүүлсэн бэ?",
@@ -196,9 +196,9 @@ window.allQuestions = {
       "3. Гүйцэх үйлдэл"
     ],
     "answer": "3",
-    "image": "",
-    "hint": "",
-    "hintImage": ""
+    "image": "images/cat1/q16.jpg",
+    "hint": "Урсгал сөрөөгүй тул \"Гүйцэх\" үйлдэл",
+    "hintImage": "images/cat1/h16.jpg"
   },
   {
     "text": "Аль нь “Саадыг тойрон гарах” үйлдэл вэ?",
@@ -211,7 +211,7 @@ window.allQuestions = {
     "answer": "3",
     "image": "",
     "hint": "",
-    "hintImage": ""
+    "hintImage": "images/cat1/h17.jpg"
   },
   {
     "text": "Суудлын автомашины жолооч “Зам тавьж өгөх” үйлдлийг зөв гүйцэтгэсэн үү?",
@@ -223,7 +223,7 @@ window.allQuestions = {
     "answer": "1",
     "image": "images/cat1/q18.jpg",
     "hint": "",
-    "hintImage": ""
+    "hintImage": "images/cat1/h18.jpg"
   },
   {
     "text": "Ачаа буулгаж 15 минут зогссон бол ямар үйлдэл хийсэнд тооцогдох вэ?",
@@ -235,7 +235,7 @@ window.allQuestions = {
     "answer": "2",
     "image": "images/cat1/q19.jpg",
     "hint": "",
-    "hintImage": ""
+    "hintImage": "images/cat1/h19.jpg"
   },
   {
     "text": "Дараах үйлдлүүдийн аль нь “Зайлшгүй зогсолт ”-д хамаарагдах вэ?",

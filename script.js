@@ -251,7 +251,7 @@ window.allQuestions = {
     "hintImage": ""
   }
   ],
-  // CAT22222222222222222222222222222222222222222222222222222222222222222222222222222
+  // CAT222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
  "2. МЕХАНИКЖСЭН ТЭЭВРИЙН ХЭРЭГСЭЛ": [
   {
     "text": "“А” ангилалд аль тээврийн хэрэгсэл хамаарагдах вэ?",
@@ -262,7 +262,7 @@ window.allQuestions = {
       "4. Дээрх бүгд"
     ],
     "answer": "2",
-    "image": "images/cat2/q1.jpg",
+    "image": "",
     "hint": "",
     "hintImage": "images/cat2/h1.jpg"
   },
@@ -274,9 +274,9 @@ window.allQuestions = {
       "3. 21 нас"
     ],
     "answer": "2",
-    "image": "images/cat2/q2.jpg",
+    "image": "",
     "hint": "",
-    "hintImage": "images/cat2/h2.jpg"
+    "hintImage": ""
   },
   {
     "text": "“В” ангилалд чиргүүлтэй суудлын автомашин хамаарагдах уу?",
@@ -286,9 +286,9 @@ window.allQuestions = {
       "3. Чиргүүлийн бүх жин 750 кг-аас ихгүй бол хамаарагдана"
     ],
     "answer": "3",
-    "image": "images/cat2/q3.jpg",
+    "image": "",
     "hint": "",
-    "hintImage": "images/cat2/h3.jpg"
+    "hintImage": "images/cat2/B.jpg"
   },
   {
     "text": "“В” ангилалд ачааны автомашин хамаарагдах уу?",
@@ -298,9 +298,9 @@ window.allQuestions = {
       "3. Хамаарагдана"
     ],
     "answer": "1",
-    "image": "images/cat2/q4.jpg",
+    "image": "",
     "hint": "",
-    "hintImage": "images/cat2/h4.jpg"
+    "hintImage": "images/cat2/B.jpg"
   },
   {
     "text": "Бүх жин нь 3.5 тонноос бага ачааны автомашин аль ангилалд хамаарагдах вэ?",
@@ -311,9 +311,9 @@ window.allQuestions = {
       "4. Зөвхөн “С1” дэд ангилал"
     ],
     "answer": "1",
-    "image": "images/cat2/q5.jpg",
+    "image": "",
     "hint": "",
-    "hintImage": "images/cat2/h5.jpg"
+    "hintImage": "images/cat2/B.jpg"
   },
   {
     "text": "“В” ангиллын тээврийн хэрэгсэл жолоодох эрхтэй хүн бүх жин нь 3.5 тонноос бага ачааны автомашинаар чиргүүл чирч хөдөлгөөнд оролцохыг зөвшөөрөх үү?",
@@ -324,9 +324,9 @@ window.allQuestions = {
       "4. Чиргүүлийн бүх жин нь 3500 кг-аас бага бол зөвшөөрнө"
     ],
     "answer": "2",
-    "image": "images/cat2/q6.jpg",
-    "hint": "Бүх жин нь 3.5 тонноос илүүгүй ачааны автомашин нь “В” ангилалд хамаарагдахаас гадна мөн бүх жин нь 750 кг-аас ихгүй чиргүүл чирсэн тохиолдолд ч хамаарагдсан хэвээр байна. Харин үүнээс илүү бүх жинтэй чиргүүл чирэх тохиолдолд “BЕ” ангиллын эрх шаардлагатай",
-    "hintImage": "images/cat2/h6.jpg"
+    "image": "",
+    "hint": "",
+    "hintImage": "images/cat2/B.jpg"
   },
   {
     "text": "1 тонн даацын чиргүүлтэй бүх жин нь 3.5 тонноос бага ачааны автомашин аль ангилалд хамаарагдах вэ?",
@@ -337,9 +337,9 @@ window.allQuestions = {
       "4. “С” ангилал"
     ],
     "answer": "2",
-    "image": "images/cat2/q7.jpg",
+    "image": "",
     "hint": "",
-    "hintImage": "images/cat2/h7.jpg"
+    "hintImage": "images/cat2/BE.jpg"
   },
   {
     "text": "“ВЕ” ангилалд аль тээврийн хэрэгсэл хамаарагдах вэ?",
@@ -350,9 +350,9 @@ window.allQuestions = {
       "4. Дээрх бүгд"
     ],
     "answer": "1",
-    "image": "images/cat2/q8.jpg",
+    "image": "",
     "hint": "",
-    "hintImage": "images/cat2/h8.jpg"
+    "hintImage": "images/cat2/BE.jpg"
   },
   {
     "text": "“В” ангилалд автобус хамаарагдах уу?",
@@ -362,9 +362,9 @@ window.allQuestions = {
       "3. Жолоочоос гадна 16-аас илүүгүй хүний суудалтай бол хамаарагдана"
     ],
     "answer": "1",
-    "image": "images/cat2/q9.jpg",
+    "image": "",
     "hint": "",
-    "hintImage": "images/cat2/h9.jpg"
+    "hintImage": ""
   },
   {
     "text": "“В” ангиллын тээврийн хэрэгсэл жолоодох эрхтэй хүн автобус жолоодохыг зөвшөөрөх үү?",
@@ -374,9 +374,9 @@ window.allQuestions = {
       "3. Хориглоно"
     ],
     "answer": "3",
-    "image": "images/cat2/q10.jpg",
+    "image": "",
     "hint": "",
-    "hintImage": "images/cat2/h10.jpg"
+    "hintImage": ""
   },
   {
     "text": "“С” ангилалд аль тээврийн хэрэгсэл хамаарагдах вэ?",
@@ -386,9 +386,9 @@ window.allQuestions = {
       "3. Бүх жин нь 3.5 тонноос их ачааны автомашин"
     ],
     "answer": "2",
-    "image": "images/cat2/q11.jpg",
-    "hint": "Зам дээр ажил үүрэг гүйцэтгэж байгаа хүн (В)-ийг “Явган зорчигч”-д тооцохгүй (ЗХД-ийн 1.2.52).",
-    "hintImage": "images/cat2/h11.jpg"
+    "image": "",
+    "hint": "",
+    "hintImage": "images/cat2/C.jpg"
   },
   {
     "text": "“В” ангиллын тээврийн хэрэгсэл жолоодох эрхтэй хүн бүх жин нь 5 тонн ачааны автомашин жолоодохыг зөвшөөрөх үү?",
@@ -398,9 +398,9 @@ window.allQuestions = {
       "3. Хориглоно"
     ],
     "answer": "3",
-    "image": "images/cat2/q12.jpg",
+    "image": "",
     "hint": "",
-    "hintImage": "images/cat2/h12.jpg"
+    "hintImage": "images/cat2/B.jpg"
   },
   {
     "text": "Зурагт үзүүлсэн автомашин аль ангилалд хамаарагдах вэ?",
@@ -412,7 +412,7 @@ window.allQuestions = {
     "answer": "2",
     "image": "images/cat2/q13.jpg",
     "hint": "",
-    "hintImage": "images/cat2/h13.jpg"
+    "hintImage": "images/cat2/CE.jpg"
   },
   {
     "text": "“С1” дэд ангилалд аль автомашин хамаарагдах вэ?",
@@ -422,9 +422,9 @@ window.allQuestions = {
       "3. Бүх жин нь 3.5 тонноос бага ачааны автомашин"
     ],
     "answer": "1",
-    "image": "images/cat2/q14.jpg",
+    "image": "",
     "hint": "",
-    "hintImage": "images/cat2/h14.jpg"
+    "hintImage": "images/cat2/C1.jpg"
   },
   {
     "text": "“D” ангилалд аль тээврийн хэрэгсэл хамаарагдах вэ?",
@@ -434,9 +434,9 @@ window.allQuestions = {
       "3. Бүх төрлийн автобус, троллейбус"
     ],
     "answer": "3",
-    "image": "images/cat2/q15.jpg",
-    "hint": "“Гүйцэж түрүүлэх” гэдэгт зөвхөн урсгал сөрж гүйцэх үйлдлийг ойлгоно (ЗХД-ийн 1.2.9).",
-    "hintImage": "images/cat2/h15.jpg"
+    "image": "",
+    "hint": "",
+    "hintImage": "images/cat2/D.jpg"
   },
   {
     "text": "Зурагт үзүүлсэн автобус аль ангилалд хамаарагдах вэ?",
@@ -449,7 +449,7 @@ window.allQuestions = {
     "answer": "1",
     "image": "images/cat2/q16.jpg",
     "hint": "",
-    "hintImage": "images/cat2/h16.jpg"
+    "hintImage": "images/cat2/DE.jpg"
   },
   {
     "text": "“D1” дэд ангилалд аль автомашин хамаарагдах вэ?",
@@ -459,9 +459,9 @@ window.allQuestions = {
       "3. Жолоочоос гадна 8-аас илүүгүй хүний суудалтай хүн тээвэрлэхэд зориулсан автомашин"
     ],
     "answer": "2",
-    "image": "images/cat2/q17.jpg",
+    "image": "",
     "hint": "",
-    "hintImage": "images/cat2/h17.jpg"
+    "hintImage": "images/cat2/D1.jpg"
   },
   {
     "text": "Зурагт үзүүлсэн автомашин жолоочоос гадна 14 хүний суудалтай бол аль ангилалд хамаарагдах вэ?",
@@ -473,8 +473,8 @@ window.allQuestions = {
     ],
     "answer": "1",
     "image": "images/cat2/q18.jpg",
-    "hint": "",
-    "hintImage": "images/cat2/h18.jpg"
+    "hint": "Зурагт үзүүлсэн автомашин 14 хүний суудалтай  “D1” дэд ангиллын автомашин ба мөн “D” ангилалд хамаарагдана.",
+    "hintImage": "images/cat2/D1.jpg"
   },
   {
     "text": "Трактор аль ангилалд хамаарагдах вэ?",
@@ -484,9 +484,9 @@ window.allQuestions = {
       "3. “СЕ” ангилал"
     ],
     "answer": "2",
-    "image": "images/cat2/q19.jpg",
+    "image": "",
     "hint": "",
-    "hintImage": "images/cat2/h19.jpg"
+    "hintImage": "images/cat2/M.jpg"
   },
   {
     "text": "Тракторыг жолоодох эрх авч болох насны доод хязгаар хэд вэ?",
@@ -496,7 +496,7 @@ window.allQuestions = {
       "3. 24 нас"
     ],
     "answer": "1",
-    "image": "images/cat2/q20.jpg",
+    "image": "",
     "hint": "",
     "hintImage": "images/cat2/h20.jpg"
   }

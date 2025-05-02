@@ -1,137 +1,242 @@
-
-window.allQuestions = {
-  "1. НЭР ТОМЬЁО БА ТОДОРХОЙЛОЛТ": [
-    {
-      "text": "Аль сумаар замын өргөнийг үзүүлсэн бэ?",
-      "options": ["1. А", "2. Б", "3. В", "4. Г", "5. Д"],
-      "answer": "4",
-      "explanation": "",
-      "image": "images/cat1/q1.jpg",
-      "hint": "“Зам” гэдэгт хөдөлгөөнд нээлттэй хучилттай буюу шороон зурвас газрыг ойлгоно.",
-      "hintImage": "images/cat1/h1.jpg"
-    }
-  ]
-};
-
-let currentCategory = "";
-let currentQuestions = [];
-let totalQuestions = 0;
-let answeredCount = 0;
-let score = 0;
-
-window.onload = () => {
-  const grid = document.getElementById('categoryGrid');
-  const categories = Object.keys(window.allQuestions);
-  categories.forEach(cat => {
-    const count = window.allQuestions[cat].length;
-    const div = document.createElement('div');
-    div.className = 'category';
-    div.innerHTML = `${cat}<br><small>(${count} асуулт)</small>`;
-    div.onclick = () => startCategory(cat);
-    grid.appendChild(div);
-  });
-};
-
-function startCategory(categoryName) {
-  currentCategory = categoryName;
-  currentQuestions = window.allQuestions[categoryName] || [];
-  totalQuestions = currentQuestions.length;
-  answeredCount = 0;
-  score = 0;
-
-  document.getElementById('categoryPage').classList.add('hidden');
-  document.getElementById('quizPage').classList.remove('hidden');
-
-  document.getElementById('categoryTitle').innerText = `${categoryName} — ${totalQuestions} асуулт`;
-  document.getElementById('progressText').innerText = `Асуулт: 0 / ${totalQuestions}`;
-  document.getElementById('progressFill').style.width = '0%';
-  document.getElementById('final-result').classList.add('hidden');
-
-  renderQuestions();
-  window.scrollTo(0, 0);
+/* General layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f0f0f0;
 }
 
-function renderQuestions() {
-  const container = document.getElementById('quizForm');
-  container.innerHTML = '';
-
-  currentQuestions.forEach((q, i) => {
-    const qElem = document.createElement('div');
-    qElem.className = 'question';
-    qElem.dataset.index = i;
-    qElem.dataset.answer = q.answer;
-    qElem.dataset.answered = 'false';
-
-    let img = q.image ? `<img src="${q.image}" class="question-image">` : '';
-    let opts = q.options.map((opt, idx) =>
-      `<div class="option" data-index="${idx + 1}" onclick="checkAnswer(this)">${opt}</div>`
-    ).join('');
-
-    const hintButton = (q.hint || q.hintImage)
-      ? `<button type='button' class='hint-btn' onclick='showHint(this)'>🔍 Hint</button>` : '';
-    const hintBlock = `
-      <div class='hint-container hidden'>
-        ${q.hintImage ? `<img src='${q.hintImage}' style='width: 50%; height: auto;'/>` : ''}
-        ${q.hint ? `<div class='hint-text'>${q.hint}</div>` : ''}
-      </div>
-    `;
-
-    qElem.innerHTML = `
-      <p><strong>${i + 1}. ${q.text}</strong></p>
-      ${img}
-      ${opts}
-      <div class="explanation hidden">${q.explanation}</div>
-      ${hintButton}
-      ${hintBlock}
-    `;
-
-    container.appendChild(qElem);
-  });
+.hidden {
+  display: none;
 }
 
-function checkAnswer(el) {
-  const q = el.closest('.question');
-  if (q.dataset.answered === 'true') return;
-
-  const correctIndex = q.dataset.answer;
-  const selectedIndex = el.dataset.index;
-
-  if (selectedIndex === correctIndex) {
-    el.classList.add('correct');
-    score++;
-  } else {
-    el.classList.add('incorrect');
-    q.querySelector(`.option[data-index="${correctIndex}"]`).classList.add('correct');
-    q.querySelector('.explanation').classList.remove('hidden');
-  }
-
-  q.dataset.answered = 'true';
-  answeredCount++;
-
-  document.getElementById('progressText').innerText = `Асуулт: ${answeredCount} / ${totalQuestions}`;
-  document.getElementById('progressFill').style.width = `${(answeredCount / totalQuestions) * 100}%`;
-
-  if (answeredCount === totalQuestions) {
-    document.getElementById('scoreText').innerText = `Таны оноо: ${score}/${totalQuestions}`;
-    document.getElementById('final-result').classList.remove('hidden');
-    window.scrollTo(0, document.body.scrollHeight);
-  }
+/* Category page layout */
+.category-page {
+  padding: 30px 20px;
+  text-align: center;
 }
 
-function restartQuiz() {
-  startCategory(currentCategory);
+.category-page h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-function backToCategories() {
-  document.getElementById('quizPage').classList.add('hidden');
-  document.getElementById('categoryPage').classList.remove('hidden');
-  window.scrollTo(0, 0);
+.category-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 
+.category {
+  background: white;
+  color: #333;
+  padding: 7px 5px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  transition: background 0.3s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
 
-function showHint(button) {
-  const hint = button.nextElementSibling;
-  if (hint) {
-    hint.classList.toggle('hidden');
-  }
+.category:hover {
+  background: #bcbdf7;
+}
+
+.category small {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  margin-top: 4px;
+  color: #666;
+}
+
+/* Quiz interface */
+.navbar {
+  background: white;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.navbar button {
+  margin-left: auto;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  background: #696cf5;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background: #5a5dd4;
+}
+
+.category-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Progress bar */
+.progress-bar {
+  width: 100%;
+  background: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #696cf5;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* Quiz container */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+}
+
+/* Question styling */
+.question {
+  background: #f0f0f0;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.question-image {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+/* Options */
+.option {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border: 0px solid white;
+}
+
+.option:hover {
+  background-color: #ffe5b4;
+}
+
+.option.correct {
+  background-color: #90ee90 !important;
+  color: black;
+}
+
+.option.incorrect {
+  background-color: #f08080 !important;
+  color: black;
+}
+
+/* Explanations */
+.explanation {
+  margin-top: 10px;
+  font-style: italic;
+  color: #a00;
+}
+
+/* Final result */
+#final-result {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#resetBtn {
+  background-color: #696cf5;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#resetBtn:hover {
+  background-color: #575ad1;
+}
+
+/* ✅ Hint Styling */
+.hint-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #ffd966;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.hint-btn:hover {
+  background-color: #ffc107;
+}
+
+.hint-container {
+  margin-top: 10px;
+  background: #fff8dc;
+  padding: 10px;
+  border: 1px dashed #999;
+  border-radius: 6px;
+  display: none;
+}
+
+.hint-container img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.hint-container .hint-text::before {
+  content: "💡 Hint: ";
+  font-weight: bold;
+  color: #222;
+}
+
+.hint-container .hint-text {
+  font-size: 14px;
+  color: #444;
+  font-style: italic;
 }

@@ -19,8 +19,10 @@
   <!-- ✅ Quiz Page -->
   <div id="quizPage" class="hidden">
     <div class="navbar sticky">
-      <button onclick="backToCategories()">← Ангилал руу буцах</button>
-      <div id="categoryTitle" class="category-title"></div>
+      <div class="navbar-top">
+        <div id="categoryTitle" class="category-title"></div>
+        <button onclick="backToCategories()">← Ангилал руу буцах</button>
+      </div>
       <div id="progressText" class="progress-text">Асуулт: 0 / 0</div>
       <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
     </div>
@@ -35,6 +37,7 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="data.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

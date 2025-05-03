@@ -502,7 +502,7 @@ window.allQuestions = {
   }
   ],
  // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------3
-"3. ЖОЛООЧИЙН ҮҮРЭГ": [
+ "3. ЖОЛООЧИЙН ҮҮРЭГ": [
   {
     "text": "Механикжсан тээврийн хэрэгслийн жолооч ямар бичиг баримттай байх үүрэгтэй вэ?",
     "options": [
@@ -537,7 +537,7 @@ window.allQuestions = {
       "3. Хориглоно"
     ],
     "answer": "3",
-    "image": "images/cat1/q03.jpg",
+    "image": "images/cat3/q03.jpg",
     "hint": "Хориглоно",
     "hintImage": ""
   },
@@ -574,7 +574,7 @@ window.allQuestions = {
       "3. Зөвхөн Б"
     ],
     "answer": "3",
-    "image": "images/cat1/q06.jpg",
+    "image": "images/cat3/q06.jpg",
     "hint": "Зөвхөн Б",
     "hintImage": ""
   },
@@ -599,7 +599,7 @@ window.allQuestions = {
       "3. Гараар дохио өгөх байдлаар аль ойр байгаа зогсоол буюу засварын газарт очихыг зөвшөөрнө"
     ],
     "answer": "3",
-    "image": "images/cat1/q08.jpg",
+    "image": "images/cat3/q08.jpg",
     "hint": "Гараар дохио өгөх байдлаар аль ойр байгаа зогсоол буюу засварын газарт очихыг зөвшөөрнө",
     "hintImage": ""
   },
@@ -623,7 +623,7 @@ window.allQuestions = {
       "3. Зөвхөн тухайн зорчигчийн хүлээх үүрэг"
     ],
     "answer": "2",
-    "image": "images/cat1/q10.jpg",
+    "image": "images/cat3/q10.jpg",
     "hint": "Хоёулангийнх нь хүлээх үүрэг",
     "hintImage": ""
   },
@@ -635,7 +635,7 @@ window.allQuestions = {
       "3. Жолооч хамгаалах малгай өмссөн бол зөвшөөрнө"
     ],
     "answer": "2",
-    "image": "images/cat1/q11.jpg",
+    "image": "images/cat3/q11.jpg",
     "hint": "Хориглоно",
     "hintImage": ""
   },
@@ -647,7 +647,7 @@ window.allQuestions = {
       "3. Тийм"
     ],
     "answer": "3",
-    "image": "images/cat1/q12.jpg",
+    "image": "images/cat3/q12.jpg",
     "hint": "Тийм",
     "hintImage": ""
   },
@@ -658,7 +658,7 @@ window.allQuestions = {
       "2. Хүлээнэ"
     ],
     "answer": "2",
-    "image": "images/cat1/q13.jpg",
+    "image": "images/cat3/q13.jpg",
     "hint": "Хүлээнэ",
     "hintImage": ""
   },
@@ -669,7 +669,7 @@ window.allQuestions = {
       "2. Тийм"
     ],
     "answer": "2",
-    "image": "images/cat1/q14.jpg",
+    "image": "images/cat3/q14.jpg",
     "hint": "Тийм",
     "hintImage": ""
   },
@@ -801,7 +801,7 @@ window.allQuestions = {
       "3. Зөвшөөрнө"
     ],
     "answer": "3",
-    "image": "images/cat1/q25.jpg",
+    "image": "images/cat3/q25.jpg",
     "hint": "Зөвшөөрнө",
     "hintImage": ""
   },
@@ -824,7 +824,7 @@ window.allQuestions = {
       "2. Гарны оролцоогүйгээр ашиглах бол зөвшөөрнө"
     ],
     "answer": "1",
-    "image": "images/cat1/q27.jpg",
+    "image": "images/cat3/q27.jpg",
     "hint": "Бусдын дуут дохиог сонсох боломжийг хязгаарласан бол хориглоно",
     "hintImage": ""
   },
@@ -835,7 +835,7 @@ window.allQuestions = {
       "2. Хориглоно"
     ],
     "answer": "2",
-    "image": "images/cat1/q28.jpg",
+    "image": "images/cat3/q28.jpg",
     "hint": "Хориглоно",
     "hintImage": ""
   },
@@ -847,7 +847,7 @@ window.allQuestions = {
       "3. Цуваа цагт 30 км-ээс бага хурдтай яваа бол зөвшөөрнө"
     ],
     "answer": "2",
-    "image": "images/cat1/q29.jpg",
+    "image": "images/cat3/q29.jpg",
     "hint": "Хориглоно",
     "hintImage": ""
   },
@@ -858,7 +858,7 @@ window.allQuestions = {
       "2. Зорчих хэсгийн өргөн хүрэлцэхгүй бол зөвшөөрнө"
     ],
     "answer": "1",
-    "image": "images/cat1/q30.jpg",
+    "image": "images/cat3/q30.jpg",
     "hint": "Хориглоно",
     "hintImage": ""
   }
